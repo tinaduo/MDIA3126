@@ -1,11 +1,18 @@
-import { Text, View } from "react-native";
-import { Link } from "expo-router";
+import { View, StyleSheet } from 'react-native';
+import { Wiggle } from '@/components/atoms/Wiggle';
 
-export default function index() {
+export default function HomeScreen() {
   return (
-    <View>
-        <Text>this is tina's index page</Text>
-        <Link href="/home"> Home</Link>
-        <Link href="/about"> About</Link>
-    </View>
-)};
+      <View style={styles.strawberryContainer}>
+        <Wiggle wiggler="🍓" />
+      </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  strawberryContainer: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+  }
+});
